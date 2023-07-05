@@ -1,4 +1,4 @@
-package _10_ListasSimplementeEnlazadas_InsersionAlFinal;
+package _12_ListasSimplementeEnlzadas_BorrarNodoAlFinal;
 
 import javax.swing.*;
 
@@ -13,7 +13,8 @@ public class App {
                                 "2. Agregar un elemento al final de la lista\n" +
                                 "3. Mostrar los datos de la lista\n" +
                                 "4. Eliminar un elemento del inicio de la lista\n" +
-                                "5. Salir\n", "Menú de opciones",3));
+                                "5. Eliminar un elemento del final de la lista\n" +
+                                "6. Salir\n", "Menú de opciones",3));
 
                 switch(opcion){
                     case 1:
@@ -48,6 +49,10 @@ public class App {
                         JOptionPane.showMessageDialog(null, "El elemento eliminado es: " + el, "Eliminando nodo del inicio", JOptionPane.INFORMATION_MESSAGE);
                         break;
                     case 5:
+                        el = listita.borrarDelFinal();
+                        JOptionPane.showMessageDialog(null, "El elemento eliminado es: " + el, "Eliminando nodo del final", JOptionPane.INFORMATION_MESSAGE);
+                        break;
+                    case 6:
                         JOptionPane.showMessageDialog(null, "Programa finalizado");
                         break;
                     default:
@@ -57,6 +62,6 @@ public class App {
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, "Error " + e.getMessage());
             }
-        }while(opcion!=5);
+        }while(opcion!=6);
     }
 }

@@ -1,4 +1,4 @@
-package _10_ListasSimplementeEnlazadas_InsersionAlFinal;
+package _11_ListasSimplementeEnlazadas_BorrarNodoAlInicio;
 
 import javax.swing.*;
 

@@ -1,4 +1,4 @@
-package _10_ListasSimplementeEnlazadas_InsersionAlFinal;
+package _11_ListasSimplementeEnlazadas_BorrarNodoAlInicio;
 
 public class Lista {
     protected Nodo inicio, fin; //Punteros para saber donde esta el inicio y final

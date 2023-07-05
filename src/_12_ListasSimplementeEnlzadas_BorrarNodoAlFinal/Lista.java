@@ -1,4 +1,4 @@
-package _10_ListasSimplementeEnlazadas_InsersionAlFinal;
+package _12_ListasSimplementeEnlzadas_BorrarNodoAlFinal;
 
 public class Lista {
     protected Nodo inicio, fin; //Punteros para saber donde esta el inicio y final
@@ -47,6 +47,21 @@ public class Lista {
             fin = null;
         }else{
             inicio = inicio.siguiente;
+        }
+        return elemento;
+    }
+
+    public int borrarDelFinal(){
+        int elemento = fin.dato;
+        if(inicio == fin){
+            inicio=fin=null;
+        }else{
+            Nodo temporal = inicio;
+            while(temporal.siguiente != fin){
+                temporal = temporal.siguiente;
+            }
+            fin = temporal;
+            fin.siguiente = null;
         }
         return elemento;
     }
