@@ -1,4 +1,4 @@
-package _12_ListasSimplementeEnlzadas_BorrarNodoAlFinal;
+package _13_ListasSimplementeEnlazadas_BorrarNodoEnEspecifico;
 
 import javax.swing.*;
 
@@ -14,7 +14,8 @@ public class App {
                                 "3. Mostrar los datos de la lista\n" +
                                 "4. Eliminar un elemento del inicio de la lista\n" +
                                 "5. Eliminar un elemento del final de la lista\n" +
-                                "6. Salir\n", "Menú de opciones",3));
+                                "6. Eliminar un nodo en especifico\n" +
+                                "7. Salir\n", "Menú de opciones",3));
 
                 switch(opcion){
                     case 1:
@@ -52,9 +53,13 @@ public class App {
                         el = listita.borrarDelFinal();
                         JOptionPane.showMessageDialog(null, "El elemento eliminado es: " + el, "Eliminando nodo del final", JOptionPane.INFORMATION_MESSAGE);
                         break;
-
-
                     case 6:
+                        el = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el " +
+                                "elemento a eliminar ", "Eliminando nodos en específico"), JOptionPane.INFORMATION_MESSAGE);
+                        listita.eliminar(el);
+                        JOptionPane.showMessageDialog(null, "El elemento eliminado es: " + el, "Eliminando nodo en específico", JOptionPane.INFORMATION_MESSAGE);
+                        break;
+                    case 7:
                         JOptionPane.showMessageDialog(null, "Programa finalizado");
                         break;
                     default:
@@ -64,6 +69,6 @@ public class App {
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, "Error " + e.getMessage());
             }
-        }while(opcion!=6);
+        }while(opcion!=7);
     }
 }
